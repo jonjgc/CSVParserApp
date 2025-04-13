@@ -4,9 +4,9 @@ header('Content-Type: application/json; charset=utf-8');
 
 // Habilitar exibição de erros para desenvolvimento (remova em produção)
 
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 // Carregar a classe
 require_once __DIR__ . '/../src/App/CsvProcessor.php';

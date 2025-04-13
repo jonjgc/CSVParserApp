@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Tetse Soulmkt - Upload de produtos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload de Produtos</h1>
+        <form id="uploadForm">
+            <div>
+                <label for="csv_file">Selecione o arquivo CSV:</label>
+                <input type="file" id="csv_file" name="csv_file" accept=".csv" required>
+            </div>
+            <div class="form-group">
+                <label for="separator">Separador:</label>
+                <select id="separator" name="separator" required>
+                    <option value=",">Vírgula (,)</option>   
+                    <option value=";">Ponto e vírgula (;)</option>   
+                </select>
+            </div>
+            <button type="button" id="uploadButton">Enviar</button>
+        </form>
+        <div id="result">
+            <!-- A tabela será inserida aqui -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
