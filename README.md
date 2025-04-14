@@ -117,7 +117,7 @@ Teste-Soulmkt-Desenvolvimento/
 │   └── App/
 │       └── CsvProcessor.php # Classe PHP para processar o CSV
 ├── uploads/                 # Pasta para arquivos CSV temporários
-├── tests/                   # (Opcional) Pasta para testes
+├── tests/                   # Pasta para testes
 └── README.md                # Documentação
   ```
 
