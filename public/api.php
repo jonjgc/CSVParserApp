@@ -2,11 +2,17 @@
 
 header('Content-Type: application/json; charset=utf-8');
 
-// Habilitar exibição de erros para desenvolvimento (remova em produção)
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// Habilitar erros apenas em desenvolvimento
+$isDevEnvironment = false;
+if ($isDevEnvironment) {
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+} else {
+    ini_set('display_errors', 0);
+    ini_set('display_startup_errors', 0);
+    error_reporting(0);
+}
 
 // Carregar a classe
 require_once __DIR__ . '/../src/App/CsvProcessor.php';
@@ -47,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['csv_file'])) {
             'data' => $result['products']
         ]);
 
-        // Removendo o arquivo após processar
+        // Opcional: Remover o arquivo após processar
         unlink($uploadFile);
     } catch (Exception $e) {
         http_response_code(400);
