@@ -1,4 +1,4 @@
-# Teste Soulmkt - Processamento de CSV de Produtos
+# Processamento de CSV de Produtos
 
 Este projeto é uma aplicação web para processar arquivos CSV contendo informações de produtos (nome, código e preço). Ele permite o upload de arquivos CSV via um formulário, processa os dados no backend e exibe os resultados em uma tabela interativa no frontend, com funcionalidades como ordenação, destaque de preços negativos e cópia de dados em formato JSON.
 
